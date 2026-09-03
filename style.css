@@ -310,7 +310,7 @@ section { padding-top: 56px; }
 
 /* ---------- conference ---------- */
 .conf-lead { color: var(--ink-soft); margin: 0 0 22px; }
-.conf-list { list-style: none; margin: 0; padding: 0; }
+.conf-list { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 2px solid var(--line); }
 .conf-list li {
   padding: 14px 0;
   border-top: 1px solid var(--line);
