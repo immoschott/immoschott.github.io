@@ -1,0 +1,30 @@
+# --- Operating system junk ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Claude Code local config ---
+.claude/
+
+# --- LaTeX build artifacts (in case .tex sources get copied in) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# --- Temporary / backup files ---
+*.tmp
+*.bak
+*_old.*

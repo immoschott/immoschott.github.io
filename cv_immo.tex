@@ -1,0 +1,437 @@
+%%!TEX TS-program = XeLaTex
+\documentclass[11pt]{article}
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+\def\myauthor{Immo Schott}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Board of Governors of the Federal Reserve System}
+\def\myaddress{Division of International Finance}
+\def\myemail{immoschott@gmail.com}
+\def\myweb{immoschott.github.io}
+\def\myphone{(202) 938-8343}
+\def\myversion{}
+\def\myrevision{}
+
+\renewcommand{\labelenumi}{\textsc{a}\theenumi.} % numbering publications
+
+\def\myaffiliation{Board of Governors of the Federal Reserve System}
+\def\myauthor{Immo Schott}
+\date{} % not used (revision control instead)
+\def\mykeywords{Immo, Schott, Immo Schott, Vita, CV, Resume, Economics}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+\usepackage{url,fancyhdr}
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links
+\usepackage[usenames,dvipsnames]{color}
+
+%% hyperlinks
+\usepackage[xetex,
+	colorlinks=true,
+	urlcolor=BlueViolet,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Fonts (xelatex)
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+\setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright   \footnotesize  August 2026  \\
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\ \vspace{-0.02in}
+  {\scriptsize  \texttt{\href{https://immoschott.github.io}{\myweb}}} \\
+  {\scriptsize  \texttt{\myphone}}
+
+\end{minipage}
+
+
+%% Name
+\noindent{\Large {\textsc{immo schott}}}
+\reversemarginpar
+
+%% Employment
+\medskip
+\marginhead{{\vskip 0.0em}current \newline positions}
+
+\noindent  2025 -- present: Principal Economist  \vspace{0.01in}
+\newline \indent \emph{Board of Governors of the Federal Reserve System}
+\newline \indent \emph{Division of International Finance - Global Modeling Studies}
+
+
+\smallskip
+
+% Past positions
+\medskip
+\marginhead{{\vskip 0.0em}past \newline positions}
+
+\noindent 2023 -- 2025: Senior Economist. \emph{Board of Governors of the Federal Reserve System}.
+ \smallskip
+
+
+\noindent 2021 -- 2023: Associate Professor (with tenure). \emph{Université de Montréal}.
+ \smallskip
+
+\noindent 2014 -- 2021: Assistant Professor. \emph{Université de Montréal}.
+
+\smallskip
+
+% Visiting positions
+\medskip
+\marginhead{{\vskip 0.2em}visiting \newline \& adjunct \newline positions}
+\noindent 2024 -- 2026: Adjunct Professor. \emph{Georgetown University}
+\smallskip
+
+\noindent 2023: Visiting Professor. \emph{University of Maryland}
+\smallskip
+
+\noindent 2019 -- 2020: Visiting Professor. \emph{Georgetown University}
+
+\smallskip
+
+% Research Affiliations
+\medskip
+\marginhead{{\vskip -0.2em}research \newline affiliations}
+\ind  2014 -- present: Research Fellow, CIREQ (Centre Interuniversitaire de Recherche en Économie Quantitative)
+
+\smallskip
+
+%% Education
+\marginhead{{\vskip -0.0em}education}
+\medskip
+\noindent\emph{European University Institute \vspace{0.01in}}
+\ind 2009-2014: Ph.D. in Economics.\newline Supervisors: Russell Cooper, Arpad Abraham
+\newline \ind Thesis: \emph{Firm Heterogeneity and the Macroeconomy}.
+\newline \ind Thesis Committee: Russell Cooper, Arpad Abraham, Eric Bartelsman, Christian Bayer
+
+\medskip
+\noindent\emph{Boston University\vspace{0.02in}}
+\ind 2012: Visiting Ph.D. student. \newline Supervisor: Simon Gilchrist  \vspace{0.01in}
+
+\smallskip
+\noindent\emph{Stockholm University\vspace{0.02in}}
+\ind 2007-2009: Master in Economics. \newline Fall 08/09: Université de Paris I: Pantheon Sorbonne (Exchange)   \vspace{0.01in}
+
+\smallskip
+\noindent\emph{Humboldt-Universität zu Berlin\vspace{0.02in}}
+\ind 2004-2007: Bachelor of Science in Economics. \newline Fall 06/07: Universität Zurich (Exchange)  \vspace{0.01in}
+
+\newpage
+
+% Working papers
+\marginhead{{\vskip 0.5em}working \newline papers}
+\medskip
+
+\ind \emph{Tax Heterogeneity and Misallocation} \\ \ind with B. Kaymak. Revise \& resubmit (2nd round) at \textbf{Review of Economics and Statistics}.
+
+
+% Papers in progress
+\marginhead{{\vskip 0.5em}papers \newline in progress}
+\medskip
+
+\ind \emph{Banks, accounting standards, and macroeconomic fluctuations} \\ \ind with J. Jungherr.
+\smallskip
+
+\ind \emph{Short-Time Work in Germany} \\ \ind with R. Cooper and M. Meyer
+\smallskip
+
+\ind\emph{Optimal Monetary Policy under Higher Tariffs} \\ \ind with M. Bodenstein, P. Cuba-Borda, A. Queralto, and R. Reyes-Heroles
+
+\smallskip
+\ind\emph{Trade Policy Sentiment and Global Corporate Investment} \\ \ind with D. Caldara, F. Ferrante, and M. Iacoviello
+
+\smallskip
+\ind\emph{Who Built the Service Economy?} \\ \ind with V. Smirnyagin
+
+\medskip
+%% Published work and work in progress
+
+\marginhead{{\vskip 0.0em}publications \& \newline accepted manuscripts}
+\ind 9. \emph{Corporate Debt Maturity Matters for Monetary Policy} \\ \ind with J. Jungherr, M. Meier, and T. Reinelt. Accepted at \textbf{Review of Economic Studies}.
+\medskip
+
+
+\ind 8. \emph{Corporate Debt Maturity and Business Cycle Fluctuations} \\ \ind with F. Ferrante and A. Prestipino. Conditionally accepted at \textbf{American Economic Journal: Macroeconomics}.
+\medskip
+
+
+\ind 7. \emph{The Effects of the War on Ukraine on Global Corporate Investment} \\ \ind with D. Caldara, M. McHenry, and M. Iacoviello. \textbf{Scottish Journal of Political Economy}, Volume 73, No. 3, July 2026. Special Issue on \textbf{``Economic Policy During \& After War''}.
+\medskip
+
+\ind 6. \emph{Input delays, Firm Dynamics, and Misallocation in Sub-Saharan Africa},\\
+\ind with I. M. Adom. \textbf{Review of Economic Dynamics}, Volume 53, July 2024, Pages 147--172.
+\medskip
+
+\ind 5. \emph{Corporate Tax Cuts and the Decline of the Manufacturing Labor Share},\\
+\ind with B. Kaymak. \textbf{Econometrica}, Volume 91, No. 6 (November 2023). Pages 2371--2408.
+\medskip
+
+\ind 4. \emph{Capital Reallocation and Aggregate Productivity}, with R. Cooper. \\
+\ind \textbf{Quantitative Economics}, Volume 14, Issue 4, November 2023, Pages 1337--1365.
+\medskip
+
+\ind 3. \emph{Slow Debt, Deep Recessions}, with J. Jungherr.\\
+\ind \textbf{American Economic Journal: Macroeconomics}, Volume 14, January 2022, Pages 224--259.
+\medskip
+
+\ind 2. \emph{Optimal Debt Maturity and Firm Investment}, with J. Jungherr.\\
+\ind \textbf{Review of Economic Dynamics}, Volume 42, October 2021, Pages 110--132.
+\medskip
+
+\ind 1. \emph{Loss-Offset Provisions in the Corporate Tax Code and Misallocation of Capital}, \\
+\ind with B. Kaymak. \textbf{Journal of Monetary Economics}, Volume 105, August 2019, Pages 1--20.
+
+
+%% Referee
+\marginhead{{\vskip 0.5em}referee}
+\medskip
+
+% Alphabetical order
+\ind \emph{American Economic Journal: Macroeconomics, American Economic Review: Insights, Econometrica, Economic Inquiry, European Economic Review, International Economic Review, Journal for Labour Market Research, Journal of Economic Dynamics \& Control, Journal of Economic Growth, Journal of Economics, Journal of Monetary Economics, Journal of the European Economic Association, Journal of Financial and Quantitative Analysis, Labor Economics, LABOUR, Macroeconomic Dynamics, Management Science, Oxford Economic Papers, Quarterly Journal of Economics, Review of Economic Dynamics, Review of Economic Studies, The B.E. Journal of Macroeconomics, The Economic Journal, The Scandinavian Journal of Economics}
+
+\medskip
+%% Conference organization
+\marginhead{{\vskip 0.8em}conference \newline organization}
+\medskip
+
+\ind 2021 -- present: \emph{Firm Heterogeneity and Macroeconomics}
+\smallskip
+
+\ind 2026: \emph{5th Conference on the International Role of the U.S. Dollar, Washington, DC (scientific committee)}
+\smallskip
+
+\ind 2026: \emph{Vienna Global Macro Workshop, Washington, DC}
+\smallskip
+
+\ind 2026: \emph{IF Collab Week on ``Advances in Analytical and Computational Methods for Economic Modeling and Research'', Washington, DC}
+\smallskip
+
+\ind 2019: \emph{Canadian Macro Study Group (CMSG)}, Montreal
+\smallskip
+
+\ind 2017: \emph{EUI Alumni Conference} in Economics
+
+\medskip
+
+% Seminars and conferences
+\marginhead{{\vskip 1.0em}recent \newline seminars \newline \& conferences \newline (incl. sched.)}
+\medskip
+\ind 2026: \emph{System Economic Heterogeneity Conference (St.~Louis Fed)};  \emph{SFS Cavalcade (Darden Graduate School of Business)}; \emph{IMF}; \emph{32nd International Conference Computing in Economics and Finance} (Venice); \emph{Annual Meeting of the Society for Economic Dynamics} (Athens); George Washington University
+
+\smallskip
+\ind 2025: \emph{Midwest Macro (Kansas City Fed)}; \emph{Canadian Economic Association} (Montreal); \emph{Conference on Economic Policy During \& After War: Ukraine 2022--Present} (Southampton, UK); \emph{System Committee on Macroeconomics Meeting} (San Francisco Fed); \emph{IF Collab Week} (Washington, DC)
+\smallskip
+
+\ind 2024: \emph{Johns Hopkins University}; \emph{University of Florida}; \emph{Richmond Fed (brownbag)}; \emph{University of Virginia}
+\smallskip
+
+\ind 2023: \emph{Federal Reserve Board}; \emph{Cleveland Fed}; \emph{Annual Bank Conference on Development Economics 2023} (World Bank); \emph{Philadelphia Fed}; \emph{Annual Meeting of the Society for Economic Dynamics}, (Cartagena); \emph{Arizona State University}; \emph{Stony Brook University}
+\smallskip
+
+\ind 2022: \emph{HEC Paris – CEPR Conference on ``Banking, Finance, Macroeconomics and the Real Economy"};   \emph{Banco Central de Chile}; \emph{Frankfurt School of Finance \& Management} Conference on ``Regulating Financial Markets''; Canadian Macro Study Group (CMSG), Montréal
+\smallskip
+
+\ind 2021:  \emph{Yale}; \emph{Federal Reserve Board}; \emph{Annual Meeting of the Society for Economic Dynamics}; \emph{European University Institute brown bag}; \emph{Firm Heterogeneity and the Macroeconomy (Oxford)}; \emph{Banque de France}; \emph{FIN-FIRE-Workshop on ``Challenges to Financial Stability"} (Halle, Germany); \emph{University of Toronto}
+
+%\ind 2020: \emph{Philadelphia Fed}; \emph{McMaster University}
+%\smallskip
+% \emph{Richmond Fed}; \emph{Virginia Commonwealth University};  ; \emph{American University}
+
+%\ind 2019:  \emph{DFG ZEW conference on `Technology, Demographics, and the Labor Market' (Köln)}; \emph{Georgetown Center for Economic Research Conference}; \emph{George Washington University}; \emph{University of Virginia}; \emph{Georgetown University}
+%\smallskip
+%
+%\ind 2018:  \emph{Canadian Economics Association (Montreal)}; \emph{CompNet Annual Conference 2018 (Halle)}; \emph{Annual Meeting of the Society for Economic Dynamics}, (Mexico City), \emph{Macroeconomics and the Business Cycle, (Santa Barbara)}, \emph{EES Conference, (Vienna)}
+
+%
+%\ind 2017 \emph{Social Statistics and Population Dynamics Seminar (McGill)}; \emph{AFiD-Nutzerkonferenz, (Berlin)}; \emph{`The Role of the Firm in the Labor Market' (DIW \& Humboldt University, Berlin)}; \emph{Bank of Canada}; \emph{Centro de Investigaci\'on y Docencia Econ\'omicas (CIDE), (Mexico City)}; \emph{Banco de México;} \emph{Macroeconomics and the Business Cycle, (Santa Barbara) }
+%\newline
+%
+%\ind 2016 \emph{Canadian Economics Association (Ottawa)}; \emph{International Monetary Fund}; \emph{Midwest Macro (Kansas City Fed)}; \emph{Danmarks Nationalbank};  \emph{DIW (Berlin)}; \emph{`Montreal Macro Brown Bag Workshop' (McGill)};  \emph{`Understanding the roots of productivity dynamics' (Bank of Italy)}  \newline
+%
+%
+%\ind 2015 \emph{Canadian Economics Association (Toronto)}; \emph{`Research Meeting on Dynamic Macroeconomics' (HEC Montréal)}; \emph{Université Laval}; \emph{`7th ReCapNet Conference', (ZEW Mannheim)}; \emph{5th CESIfo Conference on `Macroeconomics and Survey Data' (Munich)}; \emph{`11th Joint ECB/CEPR Labour Market Workshop on Job creation after the crisis' (European Central Bank)} \newline
+%
+%\ind 2014 \emph{European Economic Association (Toulouse)}; \emph{European Central Bank}; \emph{Universite de Montreal}; \emph{Kansas City Fed}; \emph{Stockholm School of Economics}; \emph{Stockholm University}; \emph{Banca d'Italia}; \emph{De Nederlandsche Bank}; \emph{Banco de Espana}; \emph{Universitat Autonoma de Barcelona} \newline
+%
+%\ind 2013 \emph{Spanish Economic Association}; \emph{DIW Berlin}; \emph{Midwest Macro (University of Minnesota)};
+%\emph{Pennsylvania State University}; \emph{IAB (Nuremberg)}; \emph{De Nederlandsche Bank};
+%\emph{Annual Meeting of the Society for Economic Dynamics} (Seoul); \newline
+%
+
+% Teaching
+\medskip
+\marginhead{{\vskip 0.5em}teaching}
+\medskip
+
+\ind Georgetown University  \\
+\emph{ECON 102 - Intermediate Macroeconomics} \newline
+\emph{ECON 440 - Growth \& Inequality} \newline
+\emph{ECON 6009 - Computation of Dynamic Models with Applications (PhD)}
+
+\smallskip
+\ind Université de Montréal \\
+ \emph{ECN 2050 - Théorie Macroéconomique 1} \newline
+\emph{ECN 2055 - Théorie Macroéconomique 2}   \newline
+\emph{ECN 3750 - Inégalité \& croissance économique} \newline
+\emph{ECN 3950 - Atelier en économie appliquée} \newline
+\emph{ECN 6153 -  Atelier de macroéconomie (Masters)} \newline
+\emph{ECN 7059 - Advanced macroeconomics (PhD)}
+
+
+
+% Awards
+\marginhead{{\vskip 0.75em}grants \& \newline scholarships}
+\medskip
+
+\ind 2023: FRQSC Soutien aux équipes de recherche.
+
+\ind 2018--2022: Social Sciences and Humanities Council of Canada (SSHRC). Grant 435-2018-0671.
+
+\ind 2015 \& 2017: Social Sciences and Humanities Council of Canada (SSHRC) and Université de Montréal - Petite Subvention
+
+\ind 2014--2017: Fonds d'installation de l'Université de Montréal
+
+\ind 2013: European University Institute, Thesis Completion Grant.
+
+\ind 2012: Data Without Boundaries Research Grant
+
+\ind 2009--2013: German Academic Exchange Service DAAD PhD Scholarship.
+
+
+
+
+%% Student supervision
+\marginhead{{\vskip 1em}phd \newline supervision \newline \& placement}
+\medskip
+
+\ind 2026:   \emph{Juste Djabakou}. \emph{Study Center Gerzensee} Post-Doc \\
+
+\ind 2023: \emph{Idossou Marius Adom}. \emph{IMF} Economist Program \\
+	 \emph{Félicien Goudou}. Assistant Professor, \emph{Wayne State University}\\
+	 \emph{Alex Nguebou}. Economist, \emph{DPIMT Montréal}
+
+\ind 2021: \emph{Guy Leonel Siwe}. Post-doc, \emph{University of Virginia}
+
+\ind 2019: \emph{Hervé Zeida}.  \emph{University of Ottawa} (without tenure track). Now at \emph{Brock University, Canada} (tenure track)
+
+\ind 2018:  \emph{Jonathan Créchet}. Assistant Professor, \emph{University of Ottawa}
+
+
+%% Professional Experience
+
+\marginhead{{\vskip 1.0em}professional \newline experience}
+\medskip
+
+\ind 2020: \emph{Consultant}, The World Bank. Publication: \emph{\href{http://documents1.worldbank.org/curated/en/170581614977174091/pdf/The-Gambia-Economic-Update-Preserving-the-Gains.pdf}{The Gambia Economic Update}}
+
+
+\ind 2014: \emph{Consultant}, European Central Bank (ECB). Research Department. CompNet.
+
+\ind 2013: \emph{Consultant}, International Labor Organisation (ILO). International
+Institute for Labor Studies (IILS). Publication: \emph{\href{http://www.ilo.org/global/research/global-reports/world-of-work/2013/WCMS_214476/lang--en/index.htm}{World of Work 2013. Chapter 4}}
+
+
+\bigskip
+
+%% Non-refereed publications
+
+\marginhead{{\vskip -0.2em}non-refereed \newline publications}
+
+\ind 2024: \emph{Do Higher Markups Lower Labor’s Share of Income?} (with B. Kaymak). Economic Commentary. Cleveland Fed. EC 2024-02.  \vspace{+0.075in}
+
+\ind 2023: \emph{COVID-19: The Italian Job} (with R. Cooper). Chapter in `Preserving Links in the Pandemic: Policies to Maintain Worker-Firm Attachment in the OECD'  \vspace{+0.075in}
+
+\ind 2016: \emph{Corporate Liquidity under Financial Constraints and Macroeconomic Uncertainty} (with D. Samaan). Chapter in `Dynamic Modeling, Empirical Macroeconomics, and Finance'
+\bigskip
+
+%% Personal
+
+\marginhead{{\vskip -0.2em}personal \newline information}
+
+\ind German citizen
+
+\ind U.S. permanent resident (green card) since 2026
+
+\ind Married, two children
+
+
+
+% References
+%\marginhead{{\vskip .2em}references}
+
+%\begin{minipage}[t]{0.33\textwidth}
+% \flushleft {\footnotesize Russell Cooper \\ Department of Economics \\ The Penn. State University \\ 611 Kern Graduate Building \\\ University Park, \textsc{pa} 16802 \\ \href{mailto:russellcoop@gmail.com}{russellcoop@gmail.com} }
+%\end{minipage}
+%\hfill
+%\hfill
+%\begin{minipage}[t]{0.33\textwidth}
+% \flushleft {\footnotesize Arpad Abraham \\ Department of Economics \\ European University Institute \\ Via della Piazzuola 43 \\ I-50133 Firenze \\ \href{mailto:arpad.abraham@eui.eu}{arpad.abraham@eui.eu} }
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.33\textwidth}
+ %\flushleft {\footnotesize Simon Gilchrist \\ Department of Economics \\ Boston University \\ 270 Bay State Road \\ Boston, \textsc{ma} 02215 \\ \href{mailto:sgilchri@bu.edu}{sgilchri@bu.edu} }
+%\end{minipage}
+
+%\bigskip
+% JMP Abstract
+%\marginhead{{\vskip 1.4em}JMP abstract}
+%\smallskip
+
+%\noindent \footnotesize{Since 2007 the number of start-ups in the US has declined by over 20\%. Young firm's below-trend job creation can account for almost all of the persistently high unemployment rate. In this paper I claim that this fact is related to the unprecedented fall in the value of real estate. I construct a model that captures the idea that start-ups require external financing, for which real estate is used as collateral. As the value of this collateral falls, start-up costs increase and the number of new firms declines. I calibrate and compute a quantitative competitive industry model with endogenous entry and exit, firm heterogeneity, labor adjustment costs, and aggregate shocks. It generates a jobless recovery and is able to explain 80\% of the increase and persistence in unemployment since the recession.}
+
+
+\end{document}
