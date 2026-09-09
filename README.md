@@ -22,8 +22,9 @@ cv_immo.tex       LaTeX source for the CV — kept here so it can be edited on a
 .nojekyll         Tells GitHub Pages to serve the files exactly as-is.
 README.md         This file.
 
-Tax_Heterogeneity.pdf, TPS_PAPER.pdf, STW_draft.pdf, DebtMaturity_Immo.pdf,
-DebtMaturity_BusinessCycles.pdf   Working-paper / accepted-manuscript PDFs.
+Tax_Heterogeneity.pdf, WhoBuilt_ServiceEconomy_Slides.pdf, TPS_PAPER.pdf,
+STW_draft.pdf, DebtMaturity_Immo.pdf, DebtMaturity_BusinessCycles.pdf
+                                  Working-paper / presentation PDFs.
 
 Publications/                              Published-paper PDFs, appendices, replication files.
 Firm Heterogeneity and Macroeconomics workshop/   Past workshop programs (PDF).
