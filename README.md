@@ -66,6 +66,13 @@ routine edits.
 | A news item           | `class="news-item"`               | the text in that line               |
 | A link's destination  | the current URL                   | the text inside `href="..."`        |
 
+BibTeX citation keys follow the research-wiki convention: last name plus a
+two-digit year for one author, both authors' initials plus the year for two
+authors, all three initials plus the year for three authors, and the first
+three initials followed by `+` and the year for four or more authors. Keep the
+`data-key` attribute and the key after `@article{` identical; `data-key` also
+sets the downloaded `.bib` filename.
+
 ### Adding a new paper
 
 Copy an existing paper's full block (from one `<div class="pub...">` down to its matching
