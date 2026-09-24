@@ -28,7 +28,7 @@
 %%%------------------------------------------------------------------------
 %%% Required style files
 %%%------------------------------------------------------------------------
-\usepackage{url,fancyhdr}
+\usepackage{url,fancyhdr,needspace}
 
 %% needed for xelatex to work
 \usepackage{fontspec}
@@ -86,6 +86,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyfoot{}
+\addtolength{\textheight}{1.3in}
 
 %%%------------------------------------------------------------------------
 %%% Address and contact block
@@ -113,8 +114,6 @@
 \newline \indent \emph{Division of International Finance - Global Modeling Studies}
 
 
-\smallskip
-
 % Past positions
 \medskip
 \marginhead{{\vskip 0.0em}past \newline positions}
@@ -128,8 +127,6 @@
 
 \noindent 2014 -- 2021: Assistant Professor. \emph{Université de Montréal}.
 
-\smallskip
-
 % Visiting positions
 \medskip
 \marginhead{{\vskip 0.2em}visiting \newline \& adjunct \newline positions}
@@ -141,14 +138,10 @@
 
 \noindent 2019 -- 2020: Visiting Professor. \emph{Georgetown University}
 
-\smallskip
-
 % Research Affiliations
 \medskip
 \marginhead{{\vskip -0.2em}research \newline affiliations}
 \ind  2014 -- present: Research Fellow, CIREQ (Centre Interuniversitaire de Recherche en Économie Quantitative)
-
-\smallskip
 
 %% Education
 \marginhead{{\vskip -0.0em}education}
@@ -176,7 +169,13 @@
 \marginhead{{\vskip 0.5em}working \newline papers}
 \medskip
 
-\ind \emph{Tax Heterogeneity and Misallocation} \\ \ind with B. Kaymak. Revise \& resubmit (2nd round) at \textbf{Review of Economics and Statistics}.
+\ind\emph{Who Built the Service Economy?} \\ \ind with V. Smirnyagin
+
+\smallskip
+\ind \emph{Short-Time Work in Germany} \\ \ind with R. Cooper and M. Meyer
+
+\smallskip
+\ind\emph{Trade Policy Sentiment and Global Corporate Investment} \\ \ind with D. Caldara, F. Ferrante, and M. Iacoviello
 
 
 % Papers in progress
@@ -184,64 +183,55 @@
 \medskip
 
 \ind \emph{Banks, accounting standards, and macroeconomic fluctuations} \\ \ind with J. Jungherr.
-\smallskip
 
-\ind \emph{Short-Time Work in Germany} \\ \ind with R. Cooper and M. Meyer
 \smallskip
-
 \ind\emph{Optimal Monetary Policy under Higher Tariffs} \\ \ind with M. Bodenstein, P. Cuba-Borda, A. Queralto, and R. Reyes-Heroles
 
-\smallskip
-\ind\emph{Trade Policy Sentiment and Global Corporate Investment} \\ \ind with D. Caldara, F. Ferrante, and M. Iacoviello
-
-\smallskip
-\ind\emph{Who Built the Service Economy?} \\ \ind with V. Smirnyagin
 
 \medskip
 %% Published work and work in progress
 
 \marginhead{{\vskip 0.0em}publications \& \newline accepted manuscripts}
+
+\ind 10. \emph{Tax Heterogeneity and Misallocation} \\ \ind with B. Kaymak. Conditionally accepted at \textbf{Review of Economics and Statistics}.
+
+
 \ind 9. \emph{Corporate Debt Maturity Matters for Monetary Policy} \\ \ind with J. Jungherr, M. Meier, and T. Reinelt. Accepted at \textbf{Review of Economic Studies}.
-\medskip
 
 
 \ind 8. \emph{Corporate Debt Maturity and Business Cycle Fluctuations} \\ \ind with F. Ferrante and A. Prestipino. Conditionally accepted at \textbf{American Economic Journal: Macroeconomics}.
-\medskip
 
 
 \ind 7. \emph{The Effects of the War on Ukraine on Global Corporate Investment} \\ \ind with D. Caldara, M. McHenry, and M. Iacoviello. \textbf{Scottish Journal of Political Economy}, Volume 73, No. 3, July 2026. Special Issue on \textbf{``Economic Policy During \& After War''}.
-\medskip
 
 \ind 6. \emph{Input delays, Firm Dynamics, and Misallocation in Sub-Saharan Africa},\\
 \ind with I. M. Adom. \textbf{Review of Economic Dynamics}, Volume 53, July 2024, Pages 147--172.
-\medskip
 
 \ind 5. \emph{Corporate Tax Cuts and the Decline of the Manufacturing Labor Share},\\
 \ind with B. Kaymak. \textbf{Econometrica}, Volume 91, No. 6 (November 2023). Pages 2371--2408.
-\medskip
 
 \ind 4. \emph{Capital Reallocation and Aggregate Productivity}, with R. Cooper. \\
 \ind \textbf{Quantitative Economics}, Volume 14, Issue 4, November 2023, Pages 1337--1365.
-\medskip
 
 \ind 3. \emph{Slow Debt, Deep Recessions}, with J. Jungherr.\\
 \ind \textbf{American Economic Journal: Macroeconomics}, Volume 14, January 2022, Pages 224--259.
-\medskip
 
 \ind 2. \emph{Optimal Debt Maturity and Firm Investment}, with J. Jungherr.\\
 \ind \textbf{Review of Economic Dynamics}, Volume 42, October 2021, Pages 110--132.
-\medskip
 
 \ind 1. \emph{Loss-Offset Provisions in the Corporate Tax Code and Misallocation of Capital}, \\
 \ind with B. Kaymak. \textbf{Journal of Monetary Economics}, Volume 105, August 2019, Pages 1--20.
 
 
 %% Referee
+\Needspace{12\baselineskip}
 \marginhead{{\vskip 0.5em}referee}
 \medskip
 
 % Alphabetical order
+\begin{sloppypar}
 \ind \emph{American Economic Journal: Macroeconomics, American Economic Review: Insights, Econometrica, Economic Inquiry, European Economic Review, International Economic Review, Journal for Labour Market Research, Journal of Economic Dynamics \& Control, Journal of Economic Growth, Journal of Economics, Journal of Monetary Economics, Journal of the European Economic Association, Journal of Financial and Quantitative Analysis, Labor Economics, LABOUR, Macroeconomic Dynamics, Management Science, Oxford Economic Papers, Quarterly Journal of Economics, Review of Economic Dynamics, Review of Economic Studies, The B.E. Journal of Macroeconomics, The Economic Journal, The Scandinavian Journal of Economics}
+\end{sloppypar}
 
 \medskip
 %% Conference organization
@@ -279,12 +269,14 @@
 \ind 2024: \emph{Johns Hopkins University}; \emph{University of Florida}; \emph{Richmond Fed (brownbag)}; \emph{University of Virginia}
 \smallskip
 
+\Needspace{5\baselineskip}
 \ind 2023: \emph{Federal Reserve Board}; \emph{Cleveland Fed}; \emph{Annual Bank Conference on Development Economics 2023} (World Bank); \emph{Philadelphia Fed}; \emph{Annual Meeting of the Society for Economic Dynamics}, (Cartagena); \emph{Arizona State University}; \emph{Stony Brook University}
 \smallskip
 
 \ind 2022: \emph{HEC Paris – CEPR Conference on ``Banking, Finance, Macroeconomics and the Real Economy"};   \emph{Banco Central de Chile}; \emph{Frankfurt School of Finance \& Management} Conference on ``Regulating Financial Markets''; Canadian Macro Study Group (CMSG), Montréal
 \smallskip
 
+\Needspace{6\baselineskip}
 \ind 2021:  \emph{Yale}; \emph{Federal Reserve Board}; \emph{Annual Meeting of the Society for Economic Dynamics}; \emph{European University Institute brown bag}; \emph{Firm Heterogeneity and the Macroeconomy (Oxford)}; \emph{Banque de France}; \emph{FIN-FIRE-Workshop on ``Challenges to Financial Stability"} (Halle, Germany); \emph{University of Toronto}
 
 %\ind 2020: \emph{Philadelphia Fed}; \emph{McMaster University}
@@ -313,9 +305,8 @@
 %
 
 % Teaching
-\medskip
 \marginhead{{\vskip 0.5em}teaching}
-\medskip
+\smallskip
 
 \ind Georgetown University  \\
 \emph{ECON 102 - Intermediate Macroeconomics} \newline
@@ -335,7 +326,7 @@
 
 % Awards
 \marginhead{{\vskip 0.75em}grants \& \newline scholarships}
-\medskip
+\smallskip
 
 \ind 2023: FRQSC Soutien aux équipes de recherche.
 
@@ -355,8 +346,9 @@
 
 
 %% Student supervision
+\Needspace{12\baselineskip}
 \marginhead{{\vskip 1em}phd \newline supervision \newline \& placement}
-\medskip
+\smallskip
 
 \ind 2026:   \emph{Juste Djabakou}. \emph{Study Center Gerzensee} Post-Doc 
 
@@ -370,11 +362,10 @@
 
 \ind 2018:  \emph{Jonathan Créchet}. Assistant Professor, \emph{University of Ottawa}
 
-\newpage
 %% Professional Experience
 
 \marginhead{{\vskip 1.0em}professional \newline experience}
-\medskip
+\smallskip
 
 \ind 2020: \emph{Consultant}, The World Bank. Publication: \emph{\href{http://documents1.worldbank.org/curated/en/170581614977174091/pdf/The-Gambia-Economic-Update-Preserving-the-Gains.pdf}{The Gambia Economic Update}}
 
@@ -385,19 +376,17 @@
 Institute for Labor Studies (IILS). Publication: \emph{\href{http://www.ilo.org/global/research/global-reports/world-of-work/2013/WCMS_214476/lang--en/index.htm}{World of Work 2013. Chapter 4}}
 
 
-\bigskip
+\medskip
 
 %% Non-refereed publications
 
 \marginhead{{\vskip -0.2em}non-refereed \newline publications}
 
-\ind 2024: \emph{Do Higher Markups Lower Labor’s Share of Income?} (with B. Kaymak). Economic Commentary. Cleveland Fed. EC 2024-02.  \vspace{+0.075in}
+\ind 2024: \emph{Do Higher Markups Lower Labor’s Share of Income?} (with B. Kaymak). Economic Commentary. Cleveland Fed. EC 2024-02.  \vspace{+0.04in}
 
-\ind 2023: \emph{COVID-19: The Italian Job} (with R. Cooper). Chapter in `Preserving Links in the Pandemic: Policies to Maintain Worker-Firm Attachment in the OECD'  \vspace{+0.075in}
+\ind 2023: \emph{COVID-19: The Italian Job} (with R. Cooper). Chapter in `Preserving Links in the Pandemic: Policies to Maintain Worker-Firm Attachment in the OECD'  \vspace{+0.04in}
 
 \ind 2016: \emph{Corporate Liquidity under Financial Constraints and Macroeconomic Uncertainty} (with D. Samaan). Chapter in `Dynamic Modeling, Empirical Macroeconomics, and Finance'
-\bigskip
-
 %% Personal
 
 \marginhead{{\vskip -0.2em}personal \newline information}
