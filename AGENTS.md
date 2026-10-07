@@ -1,5 +1,9 @@
 # Repository rules
 
+## CV date
+
+- Whenever the CV changes, update the date in its top-right corner to the current month and year.
+
 ## Research-project classification
 
 - Keep `cv_immo.tex` and `index.html` consistent about which projects are working papers and which are work in progress.
