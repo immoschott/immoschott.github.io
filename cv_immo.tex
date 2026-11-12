@@ -66,7 +66,22 @@
 %%%------------------------------------------------------------------------
 
 %% Marginal header
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\marginpar{\raggedleft\footnotesize\textsf{#1}\par}}
+
+%% Use one gap and baseline alignment for every section. Keep enough text
+%% with its label, but let longer sections continue naturally across pages.
+\newcommand{\cvsection}[1]{%
+  \par\Needspace{4\baselineskip}%
+  \addvspace{\medskipamount}%
+  \noindent\marginhead{#1}\ignorespaces%
+}
+
+%% Keep every seminar year together, reserving its actual height rather
+%% than a different estimated number of lines for selected years.
+\newcommand{\seminaryear}[2]{%
+  \ifvmode\addvspace{\smallskipamount}\fi%
+  \begin{samepage}\ind #1: #2\par\end{samepage}%
+}
 
 %% custom ampersand (font consistent with the one chosen above)
 \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
@@ -86,7 +101,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyfoot{}
-% Allow the expanded employment and teaching sections to fit on four pages.
+% Use the same page dimensions throughout the CV.
 \addtolength{\topmargin}{-0.3in}
 \addtolength{\textheight}{1.6in}
 
@@ -108,18 +123,14 @@
 \reversemarginpar
 
 %% Employment
-\medskip
-\marginhead{{\vskip 0.0em}current \newline position}
-
+\cvsection{current \newline position}
 \noindent  2025 -- present: Principal Economist  \vspace{0.01in}
 \newline \indent \emph{Board of Governors of the Federal Reserve System}
 \newline \indent \emph{Division of International Finance - Global Modeling Studies}
 
 
 % Past positions
-\medskip
-\marginhead{{\vskip 0.0em}past \newline positions}
-
+\cvsection{past \newline positions}
 \noindent 2023 -- 2025: Senior Economist. \emph{Board of Governors of the Federal Reserve System}.
  \smallskip
 
@@ -130,8 +141,7 @@
 \noindent 2014 -- 2021: Assistant Professor. \emph{Université de Montréal}.
 
 % Visiting positions
-\medskip
-\marginhead{{\vskip 0.2em}visiting \newline \& adjunct \newline positions}
+\cvsection{visiting \newline \& adjunct \newline positions}
 \noindent 2026 -- present: Adjunct Professor. \emph{University of Southern California}
 \smallskip
 
@@ -144,13 +154,11 @@
 \noindent 2019 -- 2020: Visiting Professor. \emph{Georgetown University}
 
 % Research Affiliations
-\medskip
-\marginhead{{\vskip -0.2em}research \newline affiliations}
+\cvsection{research \newline affiliations}
 \ind  2014 -- present: Research Fellow, CIREQ (Centre Interuniversitaire de Recherche en Économie Quantitative)
 
 %% Education
-\medskip
-\marginhead{{\vskip -0.0em}education}
+\cvsection{education}
 \noindent\emph{European University Institute \vspace{0.01in}}
 \ind 2009-2014: Ph.D. in Economics.\newline Supervisors: Russell Cooper, Arpad Abraham
 \newline \ind Thesis: \emph{Firm Heterogeneity and the Macroeconomy}.
@@ -171,9 +179,7 @@
 \newpage
 
 % Working papers
-\marginhead{{\vskip 0.5em}working \newline papers}
-\medskip
-
+\cvsection{working \newline papers}
 \ind\emph{Who Built the Service Economy?} \\ \ind with V. Smirnyagin
 
 \smallskip
@@ -184,20 +190,16 @@
 
 
 % Papers in progress
-\marginhead{{\vskip 0.5em}papers \newline in progress}
-\medskip
-
+\cvsection{papers \newline in progress}
 \ind \emph{Banks, accounting standards, and macroeconomic fluctuations} \\ \ind with J. Jungherr.
 
 \smallskip
 \ind\emph{Optimal Monetary Policy under Higher Tariffs} \\ \ind with M. Bodenstein, P. Cuba-Borda, A. Queralto, and R. Reyes-Heroles
 
 
-\medskip
 %% Published work and work in progress
 
-\marginhead{{\vskip 0.0em}publications \& \newline accepted manuscripts}
-
+\cvsection{publications \& \newline accepted manuscripts}
 \ind 10. \emph{Tax Heterogeneity and Misallocation} \\ \ind with B. Kaymak. Accepted at \textbf{Review of Economics and Statistics}.
 
 
@@ -228,20 +230,15 @@
 \ind with B. Kaymak. \textbf{Journal of Monetary Economics}, Volume 105, August 2019, Pages 1--20.
 
 
-%% Referee
-\Needspace{12\baselineskip}
-\marginhead{{\vskip 0.5em}referee}
-\medskip
-
-% Alphabetical order
+%% Referee (one entry, in alphabetical order)
+\begin{samepage}
 \begin{sloppypar}
+\cvsection{referee}
 \ind \emph{American Economic Journal: Macroeconomics, American Economic Review: Insights, B.E. Journal of Macroeconomics, Econometrica, Economic Inquiry, Economic Journal, European Economic Review, International Economic Review, Journal for Labour Market Research, Journal of Economic Dynamics and Control, Journal of Economic Growth, Journal of Economics, Journal of Financial and Quantitative Analysis, Journal of Monetary Economics, Journal of the European Economic Association, Labour, Labour Economics, Macroeconomic Dynamics, Management Science, Oxford Economic Papers, Quarterly Journal of Economics, Review of Economic Dynamics, Review of Economic Studies, Review of Economics and Statistics, Scandinavian Journal of Economics}
 \end{sloppypar}
-\medskip
+\end{samepage}
 %% Conference organization
-\marginhead{{\vskip 0.8em}conference \newline organization}
-\medskip
-
+\cvsection{conference \newline organization}
 \ind 2021 -- present: \emph{Firm Heterogeneity and Macroeconomics}
 \smallskip
 
@@ -259,28 +256,19 @@
 
 \ind 2017: \emph{EUI Alumni Conference} in Economics
 
-\medskip
 % Seminars and conferences
-\marginhead{{\vskip 1.0em}recent \newline seminars \newline \& conferences \newline (incl. sched.)}
-\medskip
-\ind 2026: \emph{System Economic Heterogeneity Conference (St.~Louis Fed)};  \emph{SFS Cavalcade (Darden Graduate School of Business)}; \emph{IMF}; \emph{32nd International Conference Computing in Economics and Finance} (Venice); \emph{Annual Meeting of the Society for Economic Dynamics} (Athens); George Washington University; \emph{System Committee on AI/ML Research (Philadelphia Fed)};
+\cvsection{recent \newline seminars \newline \& conferences \newline (incl. sched.)}
+\seminaryear{2026}{\emph{System Economic Heterogeneity Conference (St.~Louis Fed)};  \emph{SFS Cavalcade (Darden Graduate School of Business)}; \emph{IMF}; \emph{32nd International Conference Computing in Economics and Finance} (Venice); \emph{Annual Meeting of the Society for Economic Dynamics} (Athens); George Washington University; \emph{System Committee on AI/ML Research (Philadelphia Fed)}; \emph{Artificial Intelligence, Digitalisation, and Innovation} (ECB); \emph{U.S. International Trade Commission}; \emph{Bureau of Economic Analysis - Office of the Chief Economist}}
 
-\smallskip
-\ind 2025: \emph{Midwest Macro (Kansas City Fed)}; \emph{Canadian Economic Association} (Montreal); \emph{Conference on Economic Policy During \& After War: Ukraine 2022--Present} (Southampton, UK); \emph{System Committee on Macroeconomics Meeting} (San Francisco Fed); \emph{IF Collab Week} (Washington, DC)
-\smallskip
+\seminaryear{2025}{\emph{Midwest Macro (Kansas City Fed)}; \emph{Canadian Economic Association} (Montreal); \emph{Conference on Economic Policy During \& After War: Ukraine 2022--Present} (Southampton, UK); \emph{System Committee on Macroeconomics Meeting} (San Francisco Fed); \emph{IF Collab Week} (Washington, DC)}
 
-\ind 2024: \emph{Johns Hopkins University}; \emph{University of Florida}; \emph{Richmond Fed (brownbag)}; \emph{University of Virginia}
-\smallskip
+\seminaryear{2024}{\emph{Johns Hopkins University}; \emph{University of Florida}; \emph{Richmond Fed (brownbag)}; \emph{University of Virginia}}
 
-\Needspace{5\baselineskip}
-\ind 2023: \emph{Federal Reserve Board}; \emph{Cleveland Fed}; \emph{Annual Bank Conference on Development Economics 2023} (World Bank); \emph{Philadelphia Fed}; \emph{Annual Meeting of the Society for Economic Dynamics}, (Cartagena); \emph{Arizona State University}; \emph{Stony Brook University}
-\smallskip
+\seminaryear{2023}{\emph{Federal Reserve Board}; \emph{Cleveland Fed}; \emph{Annual Bank Conference on Development Economics 2023} (World Bank); \emph{Philadelphia Fed}; \emph{Annual Meeting of the Society for Economic Dynamics}, (Cartagena); \emph{Arizona State University}; \emph{Stony Brook University}}
 
-\ind 2022: \emph{HEC Paris – CEPR Conference on ``Banking, Finance, Macroeconomics and the Real Economy"};   \emph{Banco Central de Chile}; \emph{Frankfurt School of Finance \& Management} Conference on ``Regulating Financial Markets''; Canadian Macro Study Group (CMSG), Montréal
-\smallskip
+\seminaryear{2022}{\emph{HEC Paris – CEPR Conference on ``Banking, Finance, Macroeconomics and the Real Economy"};   \emph{Banco Central de Chile}; \emph{Frankfurt School of Finance \& Management} Conference on ``Regulating Financial Markets''; Canadian Macro Study Group (CMSG), Montréal}
 
-\Needspace{6\baselineskip}
-\ind 2021:  \emph{Yale}; \emph{Federal Reserve Board}; \emph{Annual Meeting of the Society for Economic Dynamics}; \emph{European University Institute brown bag}; \emph{Firm Heterogeneity and the Macroeconomy (Oxford)}; \emph{Banque de France}; \emph{FIN-FIRE-Workshop on ``Challenges to Financial Stability"} (Halle, Germany); \emph{University of Toronto}
+\seminaryear{2021}{ \emph{Yale}; \emph{Federal Reserve Board}; \emph{Annual Meeting of the Society for Economic Dynamics}; \emph{European University Institute brown bag}; \emph{Firm Heterogeneity and the Macroeconomy (Oxford)}; \emph{Banque de France}; \emph{FIN-FIRE-Workshop on ``Challenges to Financial Stability"} (Halle, Germany); \emph{University of Toronto}}
 
 %\ind 2020: \emph{Philadelphia Fed}; \emph{McMaster University}
 %\smallskip
@@ -307,19 +295,23 @@
 %\emph{Annual Meeting of the Society for Economic Dynamics} (Seoul); \newline
 %
 
-\newpage
 % Teaching
-\marginhead{{\vskip 0.5em}teaching} \medskip
+\cvsection{teaching}
+\begin{samepage}%
 \ind University of Southern California  \\
 \emph{ECON 357: Money, Credit, and Banking}
+\par\end{samepage}
 
 \smallskip
+\begin{samepage}
 \ind Georgetown University  \\
 \emph{ECON 102 - Intermediate Macroeconomics} \newline
 \emph{ECON 440 - Growth \& Inequality} \newline
 \emph{ECON 6009 - Computation of Dynamic Models with Applications (PhD)}
+\par\end{samepage}
 
 \smallskip
+\begin{samepage}
 \ind Université de Montréal \\
  \emph{ECN 2050 - Théorie Macroéconomique 1} \newline
 \emph{ECN 2055 - Théorie Macroéconomique 2}   \newline
@@ -327,13 +319,11 @@
 \emph{ECN 3950 - Atelier en économie appliquée} \newline
 \emph{ECN 6153 -  Atelier de macroéconomie (Masters)} \newline
 \emph{ECN 7059 - Advanced macroeconomics (PhD)}
-\medskip
+\par\end{samepage}
 
 
 % Awards
-\marginhead{{\vskip 0.75em}grants \& \newline scholarships}
-\smallskip
-
+\cvsection{grants \& \newline scholarships}
 \ind 2023: FRQSC Soutien aux équipes de recherche.
 
 \ind 2018--2022: Social Sciences and Humanities Council of Canada (SSHRC). Grant 435-2018-0671.
@@ -352,27 +342,22 @@
 
 
 %% Student supervision
-\Needspace{12\baselineskip}
-\marginhead{{\vskip 1em}phd \newline supervision \newline \& placement}
-\smallskip
+\cvsection{phd \newline supervision \newline \& placement}
+\ind 2026:   \emph{Juste Djabakou}. Post-Doc. \emph{Study Center Gerzensee}  
 
-\ind 2026:   \emph{Juste Djabakou}. \emph{Study Center Gerzensee} Post-Doc 
-
-\ind 2023: \emph{Idossou Marius Adom}. \emph{IMF} Economist Program \\
-	 \emph{Félicien Goudou}. Assistant Professor, \emph{Wayne State University}\\
+\ind 2023: \emph{Idossou Marius Adom}. Economist Program. \emph{IMF}  \\
+	 \emph{Félicien Goudou}. Assistant Professor. \emph{Wayne State University}\\
 	 \emph{Alex Nguebou}. Economist, \emph{DPIMT Montréal}
 
 \ind 2021: \emph{Guy Leonel Siwe}. Post-doc, \emph{University of Virginia}
 
-\ind 2019: \emph{Hervé Zeida}.  \emph{University of Ottawa} (without tenure track). 
+\ind 2019: \emph{Hervé Zeida}. Assistant Professor  \emph{University of Ottawa}.
 
-\ind 2018:  \emph{Jonathan Créchet}. Assistant Professor, \emph{University of Ottawa}
+\ind 2018:  \emph{Jonathan Créchet}. Assistant Professor. \emph{University of Ottawa}
 
 %% Professional Experience
 
-\marginhead{{\vskip 1.0em}professional \newline experience}
-\smallskip
-
+\cvsection{professional \newline experience}
 \ind 2020: \emph{Consultant}, The World Bank. Publication: \emph{\href{http://documents1.worldbank.org/curated/en/170581614977174091/pdf/The-Gambia-Economic-Update-Preserving-the-Gains.pdf}{The Gambia Economic Update}}
 
 
@@ -382,12 +367,10 @@
 Institute for Labor Studies (IILS). Publication: \emph{\href{http://www.ilo.org/global/research/global-reports/world-of-work/2013/WCMS_214476/lang--en/index.htm}{World of Work 2013. Chapter 4}}
 
 
-\medskip
 
 %% Non-refereed publications
 
-\marginhead{{\vskip -0.2em}non-refereed \newline publications}
-
+\cvsection{non-refereed \newline publications}
 \ind 2024: \emph{Do Higher Markups Lower Labor’s Share of Income?} (with B. Kaymak). Economic Commentary. Cleveland Fed. EC 2024-02.  \vspace{+0.04in}
 
 \ind 2023: \emph{COVID-19: The Italian Job} (with R. Cooper). Chapter in `Preserving Links in the Pandemic: Policies to Maintain Worker-Firm Attachment in the OECD'  \vspace{+0.04in}
@@ -395,12 +378,10 @@ Institute for Labor Studies (IILS). Publication: \emph{\href{http://www.ilo.org/
 \ind 2016: \emph{Corporate Liquidity under Financial Constraints and Macroeconomic Uncertainty} (with D. Samaan). Chapter in `Dynamic Modeling, Empirical Macroeconomics, and Finance'
 %% Personal
 
-\Needspace{4\baselineskip}
-\marginhead{{\vskip -0.2em}personal \newline information}
-
+\cvsection{personal \newline information}
 \ind German citizen
 
-\ind U.S. permanent resident (green card) since 2026
+\ind U.S. permanent resident (green card)
 
 \ind Married, two children
 
