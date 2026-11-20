@@ -65,14 +65,18 @@
 %%% Local commands
 %%%------------------------------------------------------------------------
 
-%% Marginal header
-\newcommand{\marginhead}[1]{\marginpar{\raggedleft\footnotesize\textsf{#1}\par}}
+%% Marginal header: left-aligned so every label shares one straight left edge.
+\newcommand{\marginhead}[1]{\marginpar{\raggedright\footnotesize\textsf{#1}\par}}
 
 %% Use one gap and baseline alignment for every section. Keep enough text
 %% with its label, but let longer sections continue naturally across pages.
+%% The gap is a length so that page 1 (short sections) can breathe more
+%% than the dense later pages; it is reset after the first \newpage.
+\newlength{\cvsectionskip}
+\setlength{\cvsectionskip}{\bigskipamount}
 \newcommand{\cvsection}[1]{%
   \par\Needspace{4\baselineskip}%
-  \addvspace{\medskipamount}%
+  \addvspace{\cvsectionskip}%
   \noindent\marginhead{#1}\ignorespaces%
 }
 
@@ -104,6 +108,10 @@
 % Use the same page dimensions throughout the CV.
 \addtolength{\topmargin}{-0.3in}
 \addtolength{\textheight}{1.6in}
+% Margin labels: a box wide enough that no label overflows, with its left
+% edge about 0.6in from the paper edge (left margin is 126pt).
+\setlength{\marginparsep}{12pt}
+\setlength{\marginparwidth}{72pt}
 
 %%%------------------------------------------------------------------------
 %%% Address and contact block
@@ -153,10 +161,6 @@
 
 \noindent 2019 -- 2020: Visiting Professor. \emph{Georgetown University}
 
-% Research Affiliations
-\cvsection{research \newline affiliations}
-\ind  2014 -- present: Research Fellow, CIREQ (Centre Interuniversitaire de Recherche en Économie Quantitative)
-
 %% Education
 \cvsection{education}
 \noindent\emph{European University Institute \vspace{0.01in}}
@@ -166,7 +170,7 @@
 
 \medskip
 \noindent\emph{Boston University\vspace{0.02in}}
-\ind 2012: Visiting Ph.D. student. \newline Supervisor: Simon Gilchrist  \vspace{0.01in}
+\ind 2012: Visiting Ph.D. student. Supervisor: Simon Gilchrist
 
 \smallskip
 \noindent\emph{Stockholm University\vspace{0.02in}}
@@ -177,6 +181,7 @@
 \ind 2004-2007: Bachelor of Science in Economics. \newline Fall 06/07: Universität Zurich (Exchange)  \vspace{0.01in}
 
 \newpage
+\setlength{\cvsectionskip}{\medskipamount}
 
 % Working papers
 \cvsection{working \newline papers}
@@ -323,7 +328,9 @@
 
 
 % Awards
-\cvsection{grants \& \newline scholarships}
+\cvsection{awards, grants \newline \& scholarships}
+\ind 2026: Board of Governors of the Federal Reserve System Special Achievement Award (team award, international scenario analysis and global modeling).
+
 \ind 2023: FRQSC Soutien aux équipes de recherche.
 
 \ind 2018--2022: Social Sciences and Humanities Council of Canada (SSHRC). Grant 435-2018-0671.
@@ -376,6 +383,11 @@ Institute for Labor Studies (IILS). Publication: \emph{\href{http://www.ilo.org/
 \ind 2023: \emph{COVID-19: The Italian Job} (with R. Cooper). Chapter in `Preserving Links in the Pandemic: Policies to Maintain Worker-Firm Attachment in the OECD'  \vspace{+0.04in}
 
 \ind 2016: \emph{Corporate Liquidity under Financial Constraints and Macroeconomic Uncertainty} (with D. Samaan). Chapter in `Dynamic Modeling, Empirical Macroeconomics, and Finance'
+
+%% Research Affiliations
+\cvsection{research \newline affiliations}
+\ind  2014 -- present: Research Fellow, CIREQ (Centre Interuniversitaire de Recherche en Économie Quantitative)
+
 %% Personal
 
 \cvsection{personal \newline information}
