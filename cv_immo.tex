@@ -70,8 +70,7 @@
 
 %% Use one gap and baseline alignment for every section. Keep enough text
 %% with its label, but let longer sections continue naturally across pages.
-%% The gap is a length so that page 1 (short sections) can breathe more
-%% than the dense later pages; it is reset after the first \newpage.
+%% Use the same section gap throughout the CV.
 \newlength{\cvsectionskip}
 \setlength{\cvsectionskip}{\bigskipamount}
 \newcommand{\cvsection}[1]{%
@@ -181,7 +180,6 @@
 \ind 2004-2007: Bachelor of Science in Economics. \newline Fall 06/07: Universität Zurich (Exchange)  \vspace{0.01in}
 
 \newpage
-\setlength{\cvsectionskip}{\medskipamount}
 
 % Working papers
 \cvsection{working \newline papers}
